@@ -78,7 +78,21 @@ export const translations = {
         "ISO14001 Қоршаған ортаны қорғау сертификаты",
         "OHSAS18001 Еңбекті қорғау және қауіпсіздік",
         "3A рейтингісі: Сенімді кәсіпорын"
-      ]
+      ],
+      cultureTitle: "Корпоративтік мәдениет",
+      missionTitle: "Миссия",
+      missionDesc: "Қызметкерлердің дамуына арналған платформа құру, клиенттер үшін құндылық қалыптастыру және қоршаған ортаны қорғау.",
+      visionTitle: "Мақсат",
+      visionDesc: "Әлемдік модульдік ғимараттар индустриясында жетекші бренд болу.",
+      advantagesTitle: "Біздің артықшылықтар",
+      advantages: [
+        { title: "Тікелей сатылым", desc: "Далдалсыз. 100-ден астам филиал және 6 өндірістік база." },
+        { title: "Жеке автопарк", desc: "Өз логистикамыз және 30-дан астам кран жылдам жеткізуді қамтамасыз етеді." },
+        { title: "Жылдамдық", desc: "Монтаждау 15 минутта, 1 сағат ішінде толық қоныстану." },
+        { title: "Қызмет ету мерзімі", desc: "Қызмет ету мерзімі 20 жылдан астам, 9 баллға дейін жер сілкінісіне төзімді." }
+      ],
+      productionTitle: "Өндіріс және ауқым",
+      productionDesc: "Ауданы 100 000 ш.м. база. Күнделікті өндіріс көлемі 500 бірлік. Автоматтандырылған желілер қолданылады."
     },
     projectsInfo: {
       title: "Жүзеге асқан жобалар",
@@ -173,7 +187,21 @@ export const translations = {
         "Сертификат экологического менеджмента ISO14001",
         "Охрана труда и промышленная безопасность OHSAS18001",
         "Предприятие высокой надежности (Рейтинг 3A)"
-      ]
+      ],
+      cultureTitle: "Корпоративная культура",
+      missionTitle: "Миссия",
+      missionDesc: "Создание платформы для развития сотрудников, создание ценности для клиентов и вклад в охрану окружающей среды.",
+      visionTitle: "Цель",
+      visionDesc: "Стать ведущим брендом в мировой индустрии модульных зданий.",
+      advantagesTitle: "Наши преимущества",
+      advantages: [
+        { title: "Прямые продажи", desc: "Без посредников. Более 100 филиалов и 6 производственных баз." },
+        { title: "Собственный автопарк", desc: "Собственная логистика и более 30 кранов обеспечивают быструю доставку." },
+        { title: "Скорость", desc: "Установка за 15 минут, полное заселение через 1 час." },
+        { title: "Долговечность", desc: "Срок службы более 20 лет, сейсмостойкость до 9 баллов." }
+      ],
+      productionTitle: "Производство",
+      productionDesc: "База площадью 100 000 кв.м. Ежедневный объем производства составляет 500 единиц. Используются автоматизированные линии."
     },
     projectsInfo: {
       title: "Реализованные проекты",
@@ -268,7 +296,21 @@ export const translations = {
         "ISO14001 Environmental Management System",
         "OHSAS18001 Occupational Health and Safety",
         "3A Rated Reliable Enterprise"
-      ]
+      ],
+      cultureTitle: "Corporate Culture",
+      missionTitle: "Mission",
+      missionDesc: "Creating a platform for employee development, creating value for clients, and contributing to environmental protection.",
+      visionTitle: "Vision",
+      visionDesc: "To become a leading brand in the global modular buildings industry.",
+      advantagesTitle: "Our Advantages",
+      advantages: [
+        { title: "Direct Sales", desc: "No middlemen. Over 100 branches and 6 production bases." },
+        { title: "Own Fleet", desc: "In-house logistics and over 30 cranes ensure fast delivery." },
+        { title: "Speed", desc: "Installation in 15 minutes, ready to move in within 1 hour." },
+        { title: "Durability", desc: "Lifespan of over 20 years, earthquake resistance up to 9 points." }
+      ],
+      productionTitle: "Production & Scale",
+      productionDesc: "100,000 sqm base. Daily production volume is 500 units. Automated lines are used."
     },
     projectsInfo: {
       title: "Completed Projects",
@@ -363,7 +405,21 @@ export const translations = {
         "ISO14001环境管理体系认证",
         "OHSAS18001职业健康安全管理",
         "3A级信用企业"
-      ]
+      ],
+      cultureTitle: "企业文化",
+      missionTitle: "使命",
+      missionDesc: "为员工搭建发展平台，为客户创造价值，为环保做贡献。",
+      visionTitle: "愿景",
+      visionDesc: "成为全球箱房行业的领导品牌。",
+      advantagesTitle: "我们的优势",
+      advantages: [
+        { title: "厂家直销", desc: "没有中间商。超过100家分公司和6个生产基地。" },
+        { title: "自有车队", desc: "自有物流和30多台吊车，保证交货速度。" },
+        { title: "快速安装", desc: "产品安装仅需15分钟，1小时即可入住。" },
+        { title: "耐用性强", desc: "使用寿命长达20年以上，抗震等级可达9级。" }
+      ],
+      productionTitle: "生产规模",
+      productionDesc: "占地10万平方米的基地。日产量500台。采用自动化流水线。"
     },
     projectsInfo: {
       title: "工程案例",

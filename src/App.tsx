@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { translations, Language } from './lib/translations';
 import { cn } from './lib/utils';
 import { MessageCircle, Phone, ArrowRight, Globe, Menu, X } from 'lucide-react';
@@ -15,8 +14,6 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const location = useLocation();
 
   const t = translations[lang];
 
@@ -28,10 +25,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   const openWhatsApp = () => {
     window.open('https://wa.me/77000000000', '_blank');
   };
@@ -41,36 +34,36 @@ function App() {
       {/* Navbar */}
       <nav className={cn(
         "fixed w-full z-50 transition-all duration-300",
-        isScrolled || location.pathname !== '/' ? "bg-white/90 backdrop-blur-md shadow-sm py-4 border-b border-zinc-200" : "bg-transparent py-6"
+        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4 border-b border-zinc-200" : "bg-transparent py-6"
       )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2">
+          <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-heading font-bold text-xl">
               Z
             </div>
             <span className={cn(
               "font-heading font-bold text-2xl tracking-tight",
-              isScrolled || location.pathname !== '/' ? "text-blue-600" : "text-white"
+              isScrolled ? "text-blue-600" : "text-white"
             )}>
               Zhonglai
             </span>
-          </Link>
+          </a>
           
           <div className="hidden md:flex items-center gap-8">
             <div className={cn(
               "flex gap-6 font-medium text-sm",
-              isScrolled || location.pathname !== '/' ? "text-zinc-600" : "text-white/90"
+              isScrolled ? "text-zinc-600" : "text-white/90"
             )}>
-              <Link to="/catalog" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.products}</Link>
-              <Link to="/projects" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.projects}</Link>
-              <Link to="/about" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.about}</Link>
+              <a href="#catalog" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.products}</a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.projects}</a>
+              <a href="#about" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.about}</a>
             </div>
             
             <div className="flex items-center gap-4">
               <div className="relative group">
                 <button className={cn(
                   "flex items-center gap-1 font-medium text-sm",
-                  isScrolled || location.pathname !== '/' ? "text-zinc-800" : "text-white"
+                  isScrolled ? "text-zinc-800" : "text-white"
                 )}>
                   <Globe className="w-4 h-4" />
                   {lang.toUpperCase()}
@@ -99,7 +92,7 @@ function App() {
             </div>
           </div>
 
-          <button className={cn("md:hidden p-2", isScrolled || location.pathname !== '/' ? "text-zinc-900" : "text-white")} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className={cn("md:hidden p-2", isScrolled ? "text-zinc-900" : "text-white")} onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -114,9 +107,9 @@ function App() {
               className="md:hidden bg-white border-t border-zinc-100 overflow-hidden"
             >
               <div className="px-4 py-6 flex flex-col gap-4">
-                <Link to="/catalog" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.products}</Link>
-                <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.projects}</Link>
-                <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.about}</Link>
+                <a href="#catalog" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.products}</a>
+                <a href="#projects" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.projects}</a>
+                <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.about}</a>
                 <div className="flex gap-4 mt-4 py-4 border-t border-zinc-100">
                    {(['kz', 'ru', 'en', 'zh'] as Language[]).map(l => (
                     <button 
@@ -139,12 +132,10 @@ function App() {
 
       {/* Pages Content */}
       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home lang={lang} openWhatsApp={openWhatsApp} />} />
-          <Route path="/catalog" element={<Catalog lang={lang} openModal={() => setIsModalOpen(true)} />} />
-          <Route path="/projects" element={<Projects lang={lang} />} />
-          <Route path="/about" element={<About lang={lang} />} />
-        </Routes>
+        <Home lang={lang} openWhatsApp={openWhatsApp} />
+        <Catalog lang={lang} openModal={() => setIsModalOpen(true)} />
+        <Projects lang={lang} />
+        <About lang={lang} />
       </main>
 
       {/* Floating WhatsApp / CTA */}

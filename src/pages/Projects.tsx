@@ -12,7 +12,7 @@ export function Projects({ lang }: { lang: Language }) {
   const t = translations[lang];
 
   return (
-    <section className="pt-32 pb-24 bg-zinc-50 min-h-screen">
+    <section id="projects" className="py-24 bg-zinc-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 mt-8">
           <motion.div

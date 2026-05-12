@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
 import { translations, Language } from "../lib/translations";
 import { MessageCircle, Phone, ShieldCheck, Award, ThumbsUp, ArrowRight } from "lucide-react";
 
@@ -116,9 +115,9 @@ export function Home({ lang, openWhatsApp }: { lang: Language, openWhatsApp: () 
                 <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
                   {t.products.expandable.desc}
                 </p>
-                <Link to="/catalog" className="inline-flex items-center gap-2 bg-white text-zinc-900 px-6 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors">
+                <a href="#catalog" className="inline-flex items-center gap-2 bg-white text-zinc-900 px-6 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors">
                   View Catalog <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </motion.div>
 

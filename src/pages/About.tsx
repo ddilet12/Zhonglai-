@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
+import { Target, Eye } from "lucide-react";
 import { translations, Language } from "../lib/translations";
 
 export function About({ lang }: { lang: Language }) {
   const t = translations[lang];
 
   return (
-    <section className="pt-32 pb-24 bg-white min-h-screen">
+    <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <motion.div 
@@ -124,6 +125,51 @@ export function About({ lang }: { lang: Language }) {
 
           </motion.div>
         </div>
+
+        {/* New Sections from PDF */}
+        <div className="mt-32">
+           <div className="text-center mb-16">
+              <h2 className="text-3xl font-heading font-extrabold text-zinc-900 mb-4">{t.aboutInfo.cultureTitle}</h2>
+              <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+           </div>
+           
+           <div className="grid md:grid-cols-2 gap-8 mb-24">
+             <div className="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm relative overflow-hidden group hover:border-blue-300 transition-colors">
+                <div className="w-12 h-12 bg-blue-600/10 text-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                   <Target className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 font-heading text-zinc-900">{t.aboutInfo.missionTitle}</h3>
+                <p className="text-zinc-600 font-medium leading-relaxed">{t.aboutInfo.missionDesc}</p>
+             </div>
+             <div className="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm relative overflow-hidden group hover:border-blue-300 transition-colors">
+                <div className="w-12 h-12 bg-blue-600/10 text-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                   <Eye className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 font-heading text-zinc-900">{t.aboutInfo.visionTitle}</h3>
+                <p className="text-zinc-600 font-medium leading-relaxed">{t.aboutInfo.visionDesc}</p>
+             </div>
+           </div>
+
+           <div className="mb-12">
+              <div className="flex flex-col lg:flex-row items-center gap-12 bg-zinc-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden relative">
+                 <div className="absolute -top-16 -right-16 w-64 h-64 bg-blue-600/20 blur-3xl rounded-full"></div>
+                 <div className="lg:w-1/3 z-10 w-full text-center lg:text-left">
+                    <h2 className="text-3xl font-heading font-extrabold mb-4">{t.aboutInfo.productionTitle}</h2>
+                    <p className="text-zinc-400 font-medium leading-relaxed max-w-sm mx-auto lg:mx-0">{t.aboutInfo.productionDesc}</p>
+                 </div>
+                 <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6 z-10 w-full">
+                    {/* @ts-ignore */}
+                    {t.aboutInfo.advantages?.map((adv, idx) => (
+                      <div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
+                         <h4 className="font-bold text-lg mb-2 text-white">{adv.title}</h4>
+                         <p className="text-sm text-zinc-400 leading-relaxed">{adv.desc}</p>
+                      </div>
+                    ))}
+                 </div>
+              </div>
+           </div>
+        </div>
+
       </div>
     </section>
   );
