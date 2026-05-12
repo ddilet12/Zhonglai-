@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { translations, Language } from "../lib/translations";
-import { MessageCircle, Phone, ShieldCheck, Award, ThumbsUp } from "lucide-react";
+import { MessageCircle, Phone, ShieldCheck, Award, ThumbsUp, ArrowRight } from "lucide-react";
 
 export function Home({ lang, openWhatsApp }: { lang: Language, openWhatsApp: () => void }) {
   const t = translations[lang];
@@ -94,6 +95,54 @@ export function Home({ lang, openWhatsApp }: { lang: Language, openWhatsApp: () 
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* Intro Bento */}
+      <section className="pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-8 bg-zinc-900 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col justify-between group"
+            >
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-3xl rounded-full"></div>
+              <div className="relative z-10 max-w-xl">
+                <h2 className="text-3xl md:text-5xl font-heading font-black text-white mb-6 leading-tight">
+                  {t.products.expandable.title}
+                </h2>
+                <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
+                  {t.products.expandable.desc}
+                </p>
+                <Link to="/catalog" className="inline-flex items-center gap-2 bg-white text-zinc-900 px-6 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors">
+                  View Catalog <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-4 bg-blue-600 rounded-3xl p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden"
+            >
+              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-white/10 blur-2xl rounded-full"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-5xl font-black font-heading mb-2">10</h3>
+                <p className="text-blue-100 font-medium text-lg leading-tight uppercase tracking-wider">
+                  Years of <br/> Excellence
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
       </section>
     </>
   );

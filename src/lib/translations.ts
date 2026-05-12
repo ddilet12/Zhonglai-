@@ -80,6 +80,16 @@ export const translations = {
         "3A рейтингісі: Сенімді кәсіпорын"
       ]
     },
+    projectsInfo: {
+      title: "Жүзеге асқан жобалар",
+      subtitle: "Біздің модульдік шешімдеріміз қонақ үй, коммерциялық нысандар және инженерлік салаларда сәтті қолданыста.",
+      items: [
+        { title: "Коммерциялық кеңістіктер", desc: "Дүкендер, кафелер және сауда көшелері" },
+        { title: "Туризм және демалыс", desc: "Глэмпингтер, курорттар және қонақ үйлер" },
+        { title: "Индустрия және инженерия", desc: "Қызметкерлер жатақханасы және уақытша кеңселер" },
+        { title: "Арнайы виллалар", desc: "Жеке дизайнмен салынған тұрғын үйлер" }
+      ]
+    },
     floating: {
       manager: "Менеджермен байланысу"
     }
@@ -163,6 +173,16 @@ export const translations = {
         "Сертификат экологического менеджмента ISO14001",
         "Охрана труда и промышленная безопасность OHSAS18001",
         "Предприятие высокой надежности (Рейтинг 3A)"
+      ]
+    },
+    projectsInfo: {
+      title: "Реализованные проекты",
+      subtitle: "Наши модульные решения успешно применяются в гостиничном бизнесе, коммерции и инженерии.",
+      items: [
+        { title: "Коммерческие пространства", desc: "Магазины, кафе и торговые улицы" },
+        { title: "Туризм и отдых", desc: "Глэмпинги, курорты и отели" },
+        { title: "Индустрия и инженерия", desc: "Общежития для рабочих и временные офисы" },
+        { title: "Особые виллы", desc: "Жилые дома по индивидуальному дизайну" }
       ]
     },
     floating: {
@@ -250,6 +270,16 @@ export const translations = {
         "3A Rated Reliable Enterprise"
       ]
     },
+    projectsInfo: {
+      title: "Completed Projects",
+      subtitle: "Our modular solutions are successfully applied in hospitality, commercial, and engineering sectors.",
+      items: [
+        { title: "Commercial Spaces", desc: "Shops, cafes, and commercial streets" },
+        { title: "Tourism & Leisure", desc: "Glamping, resorts, and hotels" },
+        { title: "Industry & Engineering", desc: "Worker dormitories and temporary offices" },
+        { title: "Custom Villas", desc: "Residential homes with custom designs" }
+      ]
+    },
     floating: {
       manager: "Contact Manager"
     }
@@ -333,6 +363,16 @@ export const translations = {
         "ISO14001环境管理体系认证",
         "OHSAS18001职业健康安全管理",
         "3A级信用企业"
+      ]
+    },
+    projectsInfo: {
+      title: "工程案例",
+      subtitle: "我们的模块化解决方案成功应用于酒店设施、商业街和工程领域。",
+      items: [
+        { title: "商业空间", desc: "商店、咖啡馆和商业街" },
+        { title: "旅游与度假", desc: "豪华露营、度假村和酒店" },
+        { title: "工业与工程", desc: "工人宿舍和临时办公室" },
+        { title: "特色别墅", desc: "定制设计的住宅" }
       ]
     },
     floating: {

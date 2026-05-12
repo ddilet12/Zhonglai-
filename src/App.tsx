@@ -8,6 +8,7 @@ import { MessageCircle, Phone, ArrowRight, Globe, Menu, X } from 'lucide-react';
 import { Home } from './pages/Home';
 import { Catalog } from './pages/Catalog';
 import { About } from './pages/About';
+import { Projects } from './pages/Projects';
 
 function App() {
   const [lang, setLang] = useState<Language>('kz');
@@ -61,6 +62,7 @@ function App() {
               isScrolled || location.pathname !== '/' ? "text-zinc-600" : "text-white/90"
             )}>
               <Link to="/catalog" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.products}</Link>
+              <Link to="/projects" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.projects}</Link>
               <Link to="/about" className="hover:text-blue-500 transition-colors uppercase tracking-widest">{t.nav.about}</Link>
             </div>
             
@@ -113,6 +115,7 @@ function App() {
             >
               <div className="px-4 py-6 flex flex-col gap-4">
                 <Link to="/catalog" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.products}</Link>
+                <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.projects}</Link>
                 <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.about}</Link>
                 <div className="flex gap-4 mt-4 py-4 border-t border-zinc-100">
                    {(['kz', 'ru', 'en', 'zh'] as Language[]).map(l => (
@@ -139,6 +142,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home lang={lang} openWhatsApp={openWhatsApp} />} />
           <Route path="/catalog" element={<Catalog lang={lang} openModal={() => setIsModalOpen(true)} />} />
+          <Route path="/projects" element={<Projects lang={lang} />} />
           <Route path="/about" element={<About lang={lang} />} />
         </Routes>
       </main>
