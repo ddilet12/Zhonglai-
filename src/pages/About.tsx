@@ -6,7 +6,7 @@ export function About({ lang }: { lang: Language }) {
   const t = translations[lang];
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <motion.div 
@@ -54,7 +54,7 @@ export function About({ lang }: { lang: Language }) {
               {t.aboutInfo.subtitle}
             </p>
             
-            <div className="grid grid-cols-2 gap-6 group mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 group mb-16">
               <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100 hover:border-blue-200 transition-colors">
                 <div className="text-3xl font-black text-blue-600 mb-2">
                   {t.aboutInfo.stats.branches.split(' ')[0]}

@@ -6,7 +6,7 @@ export function Catalog({ lang, openModal }: { lang: Language, openModal: () => 
   const t = translations[lang];
 
   return (
-    <section id="catalog" className="py-24 bg-zinc-100">
+    <section id="catalog" className="py-24 bg-zinc-100 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 mt-8">
           <h2 className="text-4xl font-heading font-extrabold text-blue-600 mb-4">{t.products.title}</h2>

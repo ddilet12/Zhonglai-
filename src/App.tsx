@@ -139,24 +139,24 @@ function App() {
       </main>
 
       {/* Floating WhatsApp / CTA */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 items-end">
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 transition-transform hover:scale-110 active:scale-95 group relative border border-blue-500"
+          className="bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-xl hover:bg-blue-700 transition-transform hover:scale-110 active:scale-95 group relative border border-blue-500"
         >
           <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-zinc-900 text-sm font-bold px-3 py-1.5 rounded-lg shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">
             {t.hero.cta}
           </span>
-          <ArrowRight className="w-6 h-6" />
+          <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>  
         <button 
           onClick={openWhatsApp}
-          className="bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:bg-[#20bd5a] transition-transform hover:scale-110 active:scale-95 group relative flex items-center justify-center"
+          className="bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-xl hover:bg-[#20bd5a] transition-transform hover:scale-110 active:scale-95 group relative flex items-center justify-center"
         >
           <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-slate-900 text-sm font-bold px-3 py-1.5 rounded-lg shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">
             {t.hero.whatsapp}
           </span>
-          <MessageCircle className="w-6 h-6 fill-current" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
         </button>
       </div>
 

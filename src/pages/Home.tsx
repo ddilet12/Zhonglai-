@@ -38,18 +38,18 @@ export function Home({ lang, openWhatsApp }: { lang: Language, openWhatsApp: () 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
                   onClick={openWhatsApp}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/30"
+                  className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/30"
                 >
                   <MessageCircle className="w-5 h-5 fill-current" />
                   {t.hero.whatsapp}
                 </button>
-                <div className="flex items-center gap-3 px-6 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
-                  <div className="w-10 h-10 rounded-full bg-zinc-100/20 flex items-center justify-center">
+                <div className="w-full sm:w-auto flex items-center justify-center sm:justify-start gap-3 px-6 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                  <div className="w-10 h-10 rounded-full bg-zinc-100/20 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-xs text-zinc-300 uppercase tracking-widest">{t.floating.manager}</div>
-                    <div className="font-mono font-bold">+7 700 000 0000</div>
+                    <div className="text-[10px] sm:text-xs text-zinc-300 uppercase tracking-widest">{t.floating.manager}</div>
+                    <div className="font-mono font-bold text-sm sm:text-base">+7 700 000 0000</div>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export function Home({ lang, openWhatsApp }: { lang: Language, openWhatsApp: () 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl shadow-sm p-6 md:p-8 flex flex-wrap gap-8 justify-between items-center border border-zinc-200"
+          className="bg-white rounded-3xl shadow-sm p-6 md:p-8 flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-8 justify-between items-start sm:items-center border border-zinc-200"
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600">
